@@ -9,7 +9,7 @@
  */
 
 (function(global) {
-  var swToolboxURL = new URL('../sw-toolbox/lib/sw-toolbox.js', global.params.get('baseURI')).href;
+  var swToolboxURL = new URL('../sw-toolbox/sw-toolbox.js', global.params.get('baseURI')).href;
   importScripts(swToolboxURL);
 
   var cacheId = global.params.get('cacheId');
