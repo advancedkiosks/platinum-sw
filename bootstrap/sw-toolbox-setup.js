@@ -9,14 +9,14 @@
  */
 
 (function(global) {
-  var swToolboxURL = new URL('../sw-toolbox/sw-toolbox.js', global.params.get('baseURI')).href;
+  var swToolboxURL = new URL('../sw-toolbox/companion.js', global.params.get('baseURI')).href;
   importScripts(swToolboxURL);
 
   var cacheId = global.params.get('cacheId');
   if (cacheId) {
     global.toolbox.options.cacheName = cacheId + '$$$' + global.registration.scope;
   }
-  
+
   if (global.params.has('defaultCacheStrategy')) {
     var strategy = global.params.get('defaultCacheStrategy');
     global.toolbox.router.default = global.toolbox[strategy] || global[strategy];
@@ -43,7 +43,7 @@
   }
 
   global.toolbox.precache(precachePromise);
-  
+
   if (global.params.has('route')) {
     var setsOfRouteParams = global.params.get('route');
     while (setsOfRouteParams.length > 0) {
