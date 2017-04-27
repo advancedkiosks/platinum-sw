@@ -8,6 +8,8 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
+<link rel="import" href="../polymer/polymer.html">
+
 <script>
   /**
    * `Polymer.PlatinumSwRegisterableBehavior` fires un/registration events which
@@ -17,7 +19,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
    * @polymerBehavior Polymer.PlatinumSwRegisterableBehavior
    */
   Polymer.PlatinumSwRegisterableBehavior = {
-    properties: {
       /**
        * Fired when the element is attached.
        *
@@ -29,7 +30,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
        *
        * @event platinum-sw-unregister
        */
-    },
 
     attached: function() {
       this.fire('platinum-sw-register', { composed: true });
