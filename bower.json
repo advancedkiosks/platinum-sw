@@ -22,10 +22,10 @@
     "bower_components"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^2.0.0-rc.3",
     "sw-toolbox": "^3.6.1"
   },
   "devDependencies": {
+    "polymer": "Polymer/polymer#^2.0.0-rc.3",
     "fetch": "^0.9.0",
     "iron-component-page": "PolymerElements/iron-component-page#2.0-preview",
     "marked-element": "PolymerElements/marked-element#2.0-preview",
